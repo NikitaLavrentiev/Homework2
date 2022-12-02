@@ -6,6 +6,9 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
+        task7();
+        task8();
 
     }
 
@@ -79,6 +82,40 @@ public class Main {
 
         frog = frog + 4;
         System.out.println(frog);
+    }
+    public static void task6() {
+        System.out.println("\nЗадача 6");
+
+        var box1 = 78.2;
+        var box2 = 82.7;
+
+        var boxersWeight  = box1 + box2;
+        System.out.println("Вес обоих бойцов " + boxersWeight + " кг");
+
+        var overload = (box1 - box2) % overload;
+        System.out.print("Разница в весе боксёров " + overload + " кг");
+
+    }
+
+    public static void task7() {
+        System.out.println("\nЗадача 7");
+
+        var box1 = 78.2;
+        var box2 = 82.7;
+
+        var boxersWeightDif = (int max(int box1, int box2) ) - (int min (int box1, int box2));
+        System.out.println("Разница в весе бойцов " + boxersWeightDif + " кг");
+
+        var boxersWeightDif = (int max(int box1, int box2) % int min (int box1, int box2));
+        System.out.println("Разница в весе бойцов " + boxersWeightDif + " кг");
+
+
+    }
+
+    public static void task8() {
+        System.out.println("\nЗадача 8");
+
+
     }
 
 }
