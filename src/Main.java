@@ -12,7 +12,8 @@ public class Main {
 
     }
 
-       public static void task1 () {
+
+    public static void task1 () {
         System.out.println("\nЗадача 1");
 
         var dog =8.0;
@@ -92,8 +93,15 @@ public class Main {
         var boxersWeight  = box1 + box2;
         System.out.println("Вес обоих бойцов " + boxersWeight + " кг");
 
-        var overload = (box1 - box2) % overload;
-        System.out.print("Разница в весе боксёров " + overload + " кг");
+        var overload = (box1 - box2) % boxersWeight;
+        System.out.print("Разница в весе боксёров " + Math.abs(overload) + " кг");
+
+        if (Math.abs(overload) < 1) {
+            System.out.println("\nБой состоится");
+        } else {
+
+            System.out.println("\nБоя не будет, расходимся на обед");
+        }
 
     }
 
@@ -103,19 +111,31 @@ public class Main {
         var box1 = 78.2;
         var box2 = 82.7;
 
-        var boxersWeightDif = (int max(int box1, int box2) ) - (int min (int box1, int box2));
-        System.out.println("Разница в весе бойцов " + boxersWeightDif + " кг");
+        double module;
+        module = Math.abs(box1 - box2);
+        System.out.println(module);
 
-        var boxersWeightDif = (int max(int box1, int box2) % int min (int box1, int box2));
-        System.out.println("Разница в весе бойцов " + boxersWeightDif + " кг");
+        var sumOfWeight = box1 + box2;
+        int AnotherWeight = (int) (module % sumOfWeight);
+        System.out.println(AnotherWeight);
 
-
-    }
+        }
 
     public static void task8() {
         System.out.println("\nЗадача 8");
 
+        var allTime = 640;
+        var workingTime = 8;
+        var workers =  (allTime / workingTime);
+        System.out.println(workers + " человек работает в компании");
+
+        workers = workers + 94;
+        workingTime = (allTime / workers);
+        System.out.println("Если в компании работает " + workers + " человек, то всего " + workingTime + " часов работы может быть поделено между сотрудниками");
+
 
     }
-
 }
+
+
+
